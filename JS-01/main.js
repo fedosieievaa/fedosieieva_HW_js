@@ -1,6 +1,7 @@
 const breadPrice = 15.678;
 const meatPrice = 123.965;
 const milkPrice = 90.2345;
+let totalAmountOfMoney = 500;
 
 const maxPrice = Math.max(breadPrice, meatPrice, milkPrice);
 const minPrice = Math.min(breadPrice, meatPrice, milkPrice);
@@ -12,7 +13,7 @@ const roundHundred = Math.round(sumFloor / 100) * 100;
 
 const oddOrEvenSum = !(sumFloor % 2);
 
-const change = 500 - sumPrice;
+const change = totalAmountOfMoney - sumPrice;
 
 const everage = (sumPrice / 3).toFixed(2);
 
