@@ -17,7 +17,7 @@ alert(`Result: ${result}`);
 
 function checkNumber(name) {
     let num = +prompt('Enter the number ' + name + ':');
-    while (!Number.isInteger(num)) {
+    while (!Number.isInteger(num) || num === 0) {
         num = +prompt('Enter the NUMBER ' + name + ': (ex.: 1, 2, 7, 15)');
     }
     return num;
