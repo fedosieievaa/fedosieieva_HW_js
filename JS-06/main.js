@@ -6,7 +6,7 @@ const getRandomArray = (length, min, max) => {
     }
     return randomNumbers;
 }
-const randomNumbers = getRandomArray(3, -5, 20);
+const randomNumbers = getRandomArray(10, -10, 10);
 
 // 2
 const getModa = (...numbers) => {
@@ -40,7 +40,7 @@ const getAverage = (...numbers) => {
 
 // 4
 const getMedian = (...numbers) => {
-    const result = numbers.filter((number) => Number.isInteger(number)).sort();
+    const result = numbers.filter((number) => Number.isInteger(number)).sort((a, b) => a - b);
     if (result.length % 2) {
         return result[Math.floor(result.length / 2)];
     }
