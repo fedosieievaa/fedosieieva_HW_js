@@ -23,3 +23,109 @@ const students = [{
         cosmology: [5, 5, 5, 5]
     }
 }];
+
+// 1
+const getSubjects = (student) => Object.keys(student.subjects).map((subject) => subject.substring(0, 1).toUpperCase() + subject.substring(1).toLowerCase().replaceAll('_', ' '));
+
+// 2
+const getAverageMark = (student) => {
+    let quantity = Object.values(student.subjects).length;
+    return (Object.values(student.subjects).map((marks) => marks.reduce((acc, mark) => { quantity++; return acc + mark; })).reduce((acc, mark) => acc + mark) / quantity).toFixed(2);
+
+}
+
+// 3
+const getStudentInfo = (student) => {
+    return { name: student.name, course: student.course, averageMark: getAverageMark(student) / 1 };
+}
+
+// 4
+const getStudentsNames = (names) => names.map((student) => student.name).sort();
+
+// 5
+const getBestStudent = (students) => students.sort((a, b) => getAverageMark(b) - getAverageMark(a))[0].name;
+
+//6
+const calculateWordLetters = (word) => {
+    const wordObject = {};
+    word.toLowerCase().split('').forEach((letter) => {
+        Object.keys(wordObject).includes(letter) ? wordObject[letter]++ : wordObject[letter] = 1
+    });
+    return wordObject;
+}
+
+console.log(getSubjects(students[0]));
+console.log(getAverageMark(students[0]));
+console.log(getStudentInfo(students[0]));
+console.log(getStudentsNames(students));
+console.log(getBestStudent(students));
+console.log(calculateWordLetters('тест'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const getStudentsNames = (names) => names.map((student) => student.name).sort();
+// console.log(getStudentsNames(students));
