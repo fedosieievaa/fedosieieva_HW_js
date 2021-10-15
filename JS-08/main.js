@@ -25,7 +25,7 @@ const getMySalary = function() {
     const result = {};
     result.salary = +(Math.random() * (2000 - 1500) + 1500).toFixed(2);
     result.taxes = this.tax;
-    result.profit = +(this.middleSalary - (this.tax * result.salary)).toFixed(2);
+    result.profit = +(result.salary - (this.tax * result.salary)).toFixed(2);
     return result;
 }
 setInterval(() => console.log(getMySalary.call(ukraine)), 10000);
