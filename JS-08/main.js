@@ -22,8 +22,10 @@ console.log('Скільки всього податків платять IT-сп
 
 // 4
 const getMySalary = function() {
+    const minSalary = 1500;
+    const maxSalary = 2000;
     const result = {};
-    result.salary = Math.round(Math.random() * (2000 - 1500) + 1500);
+    result.salary = Math.round(Math.random() * (maxSalary - minSalary) + minSalary);
     result.taxes = +(result.salary * this.tax).toFixed(2);
     result.profit = +(result.salary - this.tax * result.salary).toFixed(2);
     return result;
