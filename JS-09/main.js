@@ -1,16 +1,16 @@
 class Student {
-    marks = [];
-    deletedMarks = [];
     constructor(university, course, fullName) {
         this.university = university;
         this.course = course;
         this.fullName = fullName;
+        this.marks = [];
+        this.isExpelled = false;
     }
     get getMarks() {
-        return this.marks;
+        return this.isExpelled ? null : this.marks;
     }
     set setMarks(mark) {
-        if (this.marks !== null) {
+        if (!this.isExpelled) {
             this.marks.push(mark);
         };
     }
@@ -18,18 +18,17 @@ class Student {
         return `Студент ${this.course}го курсу ${this.university}, ${this.fullName}`
     }
     getAverageMark() {
-        if (this.marks !== null && this.marks.length >= 1) {
+        if (this.marks.length >= 1 && !this.isExpelled) {
             return (this.marks.reduce((acc, mark) => acc + mark) / this.marks.length).toFixed(1);
         } else {
             return 0;
         }
     }
     dismiss() {
-        this.deletedMarks = this.marks;
-        this.marks = null;
+        this.isExpelled = true;
     }
     recover() {
-        this.marks = this.deletedMarks;
+        this.isExpelled = false;
     }
 }
 // Створюю дані студента: 
