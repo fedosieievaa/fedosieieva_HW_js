@@ -1,5 +1,5 @@
 body {
-    background: url(./img/contrabass.jpeg) no-repeat;
+    background: url(./assets/img/contrabass.jpeg) no-repeat;
     background-size: cover;
     backdrop-filter: grayscale(100%);
 }
