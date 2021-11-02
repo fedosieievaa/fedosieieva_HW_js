@@ -4,7 +4,7 @@ const getRandomChinese = function(length) {
         let arr = [];
         let i = 0;
         const interval = setInterval(() => {
-            sign = String(Date.now()).substr(8);
+            sign = String(Date.now()).slice(-5);
             arr.push(String.fromCharCode(sign));
             if (i === length - 1) {
                 clearInterval(interval);
