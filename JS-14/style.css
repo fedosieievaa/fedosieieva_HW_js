@@ -1,169 +1,176 @@
-body {
-    background: #000000;
-    color: #FFC500;
-    font-family: 'Righteous', sans-serif;
-}
-
-.starwars-logo {
-    margin: 5px;
-    padding: 10px;
-    position: fixed;
-}
-
-.starwars-logo-hover:hover {
-    fill: rgb(184, 11, 11);
-}
-
-.container {
-    width: 100%;
-    margin: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#input {
-    width: 13%;
-    height: 20px;
-    outline: none;
-    color: #FFC500;
-    font-family: 'Righteous', sans-serif;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 10px;
-    border: 1px solid #FFC500;
-}
-
-#input:focus {
-    border: 2px solid #FFC500;
-}
-
-.star-wars-btn {
-    margin: 10px;
-    width: 15%;
-    height: auto;
-    padding: 20px 5px;
-    border: 3px solid #FFC500;
-    border-radius: 10px;
-    cursor: pointer;
-    color: #FFC500;
-    background: transparent;
-    font-family: 'Righteous', sans-serif;
-    font-size: 13px;
-}
-
-.star-wars-btn:hover {
-    transition: 0.5s ease-in-out;
-    font-size: 16px;
-    width: 12%;
-}
-
-.star-wars-btn:active {
-    color: #000000;
-    background: #FFC500;
-}
-
-.list-of-people {
-    width: 15%;
-    text-align: center;
-    border: 1px solid #FFC500;
-}
-
-.yellow {
-    text-align: center;
-    margin: 5px;
-    padding: 10px;
-    border: 1px solid #FFC500;
-    border-radius: 10px;
-    background-color: #ffc4001f;
-}
-
-.yellow h1 {
-    color: #c29500;
-    background-color: #2c0909;
-    font-size: 24px;
-    border: 1px solid #969696;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-.prev-next {
-    margin-top: 20px;
-    width: 20%;
-    display: flex;
-    justify-content: space-between;
-}
-
-#prev,
-#next {
-    width: 70px;
-    color: #FFC500;
-    font-family: 'Righteous', sans-serif;
-    background: #ffc40034;
-    border-style: none;
-    cursor: pointer;
-    border-radius: 10px;
-    padding: 5px;
-}
-
-#prev:hover,
-#next:hover {
-    color: #ffdb64;
-}
-
-#prev:active,
-#next:active {
-    border: 1px solid #FFC500;
-}
-
-#page {
-    border: 1px solid #FFC500;
-    padding: 3px 8px;
-    border-radius: 50%;
-}
-
-.planet {
-    border: 1px solid red;
-    list-style: none;
-    text-align: center;
-    padding: 5px;
-    margin: 5px;
-}
-
-@media all and (max-width:1100px) {
-    .prev-next {
-        width: 40%;
+    body {
+        width: 100%;
+        background: #000000;
+        color: #FFC500;
+        font-family: 'Righteous', sans-serif;
     }
-    .star-wars-btn,
-    #input {
-        width: 40%;
-    }
-    .star-wars-btn:hover {
-        transition: 0.5s ease-in-out;
-        font-size: 16px;
-        width: 42%;
-    }
-}
-
-@media all and (max-width:650px) {
-    .prev-next {
-        width: 70%;
-    }
+    
     .starwars-logo {
-        padding: 10px 10px 10px 50px;
-        position: unset;
-        display: block;
-        margin: 0 auto;
+        margin: 5px;
+        padding: 10px;
+        position: fixed;
     }
-    .star-wars-btn,
+    
+    .starwars-logo-hover:hover {
+        fill: rgb(184, 11, 11);
+    }
+    
+    .container {
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
     #input {
-        width: 80%;
+        width: 13%;
+        height: 20px;
+        outline: none;
+        color: #FFC500;
+        font-family: 'Righteous', sans-serif;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 10px;
+        border: 1px solid #FFC500;
     }
+    
+    #input:focus {
+        border: 2px solid #FFC500;
+    }
+    
+    .star-wars-btn {
+        margin: 10px;
+        width: 15%;
+        height: auto;
+        padding: 20px 5px;
+        border: 3px solid #FFC500;
+        border-radius: 10px;
+        cursor: pointer;
+        color: #FFC500;
+        background: transparent;
+        font-family: 'Righteous', sans-serif;
+        font-size: 13px;
+    }
+    
     .star-wars-btn:hover {
         transition: 0.5s ease-in-out;
         font-size: 16px;
-        width: 75%;
+        width: 12%;
     }
-}
+    
+    .star-wars-btn:active {
+        color: #000000;
+        background: #FFC500;
+    }
+    
+    #list-of-people {
+        width: 1250px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .gender {
+        position: relative;
+        bottom: -3px;
+    }
+    
+    .yellow {
+        width: 250px;
+        text-align: center;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #FFC500;
+        border-radius: 10px;
+        background-color: #ffc4001f;
+    }
+    
+    .yellow h1 {
+        color: #c29500;
+        background-color: #2c0909;
+        font-size: 24px;
+        border: 1px solid #969696;
+        border-radius: 10px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .prev-next {
+        margin-top: 20px;
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #prev,
+    #next {
+        width: 70px;
+        color: #FFC500;
+        font-family: 'Righteous', sans-serif;
+        background: #ffc40034;
+        border-style: none;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    
+    #prev:hover,
+    #next:hover {
+        color: #ffdb64;
+    }
+    
+    #prev:active,
+    #next:active {
+        border: 1px solid #FFC500;
+    }
+    
+    #page {
+        border: 1px solid #FFC500;
+        padding: 3px 8px;
+        border-radius: 50%;
+    }
+    
+    .planet {
+        border-radius: 30%;
+        border: 1px solid red;
+        list-style: none;
+        text-align: center;
+        padding: 10px;
+        margin: 5px;
+    }
+    
+    @media all and (max-width:1100px) {
+        .prev-next {
+            width: 40%;
+        }
+        .star-wars-btn,
+        #input {
+            width: 40%;
+        }
+        .star-wars-btn:hover {
+            transition: 0.5s ease-in-out;
+            font-size: 16px;
+            width: 42%;
+        }
+    }
+    
+    @media all and (max-width:650px) {
+        .prev-next {
+            width: 70%;
+        }
+        .starwars-logo {
+            position: unset;
+            display: block;
+            margin: 0 auto;
+        }
+        .star-wars-btn,
+        #input {
+            width: 80%;
+        }
+        .star-wars-btn:hover {
+            transition: 0.5s ease-in-out;
+            font-size: 16px;
+            width: 75%;
+        }
+    }
