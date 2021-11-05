@@ -108,20 +108,6 @@
         border-radius: 50%;
     }
     
-    #wookiee {
-        color: #FFC500;
-        font-family: 'Righteous', sans-serif;
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        padding: 10px;
-        margin: 30px;
-        width: 80px;
-        cursor: pointer;
-        background: transparent;
-        border: 1px solid #FFC500;
-    }
-    
     #wookiee:hover {
         transition: 0.2s ease-in-out;
         border: 2px solid #FFC500;
@@ -190,6 +176,10 @@
         .personal_photo {
             width: 90%;
         }
+        .starwars-logo {
+            display: block;
+            margin: 0 auto;
+        }
     }
     
     @media all and (max-width:650px) {
@@ -201,11 +191,6 @@
         }
         .prev-next {
             width: 70%;
-        }
-        .starwars-logo {
-            position: unset;
-            display: block;
-            margin: 0 auto;
         }
         .star-wars-btn,
         #input {

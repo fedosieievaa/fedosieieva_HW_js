@@ -59,7 +59,6 @@ const getInfo = (link) => {
                 <p>Birth Year: ${birthYear}</p>
                 <p>Gender: ${gender}</p>
             </div> `;
-            console.log(allInfo)
             listOfPeople.innerHTML += allInfo;
         })
         .catch((err) => {
@@ -86,6 +85,7 @@ const getPlanets = () => {
 getPeople;
 getPlanets;
 
+
 getPeopleBtn.addEventListener('click', getPeople);
 getPlanetsBtn.addEventListener('click', getPlanets);
 prevBtn.addEventListener('click', () => {
@@ -93,7 +93,7 @@ prevBtn.addEventListener('click', () => {
     currentPage -= 1;
     getPlanets();
 });
-nextBtn.addEventListener("click", () => {
+nextBtn.addEventListener('click', () => {
     if (currentPage === 6) return;
     currentPage += 1;
     getPlanets();
