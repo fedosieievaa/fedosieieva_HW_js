@@ -38,17 +38,23 @@ const getInfo = (link) => {
             const name = response.data.name;
             const birthYear = response.data.birth_year;
             let gender = response.data.gender;
-            if (gender === 'male') {
-                gender = `<img class="gender" src="./assets/img/male.svg" width="15px" alt="male">`
+            switch (gender) {
+                case 'male':
+                    gender = `<img class="gender" src="./assets/img/male.svg" width="15px" alt="male">`
+                    break;
+                case 'female':
+                    gender = `<img class="gender" src="./assets/img/female.svg"   width="15px"   alt="male">`
+                    break;
+                case 'hermaphrodite':
+                    gender = `<img class="gender" src="./assets/img/hermaphrodite.svg" width="15px" alt="male">`
+                    break;
+                default:
+                    ''
             }
-            if (gender === 'female') {
-                gender = `<img class="gender" src="./assets/img/female.svg"   width="15px"   alt="male">`
-            }
-            if (gender === 'hermaphrodite') {
-                gender = `<img class="gender" src="./assets/img/hermaphrodite.svg" width="15px" alt="male">`
-            }
+            const personalAvatar = name.replaceAll(' ', '_')
             const allInfo = `
             <div class="yellow">
+                <img class="personal_photo" src="./assets/img/${personalAvatar}.jpeg" width="150px" alt="Personal avatar">
                 <h1>${name}</h1>
                 <p>Birth Year: ${birthYear}</p>
                 <p>Gender: ${gender}</p>
