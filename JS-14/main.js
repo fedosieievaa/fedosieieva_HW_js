@@ -10,13 +10,12 @@ const page = document.getElementById('page');
 let currentPage = 1;
 
 const getPeople = () => {
-    if (input.value === '1' || input.value === '2' || input.value === '3' || input.value === '4' || input.value === '5' || input.value === '6') {
+    if (Number(input.value) >= 1 && Number(input.value) <= 6) {
         listOfPeople.innerHTML = 'loading...';
     } else {
         listOfPeople.innerHTML = 'Please, enter film from 1 to 6:)';
         return;
     }
-
     axios
         .get(`${baseUrl}/films/${input.value}`)
         .then((response) => {
@@ -76,15 +75,21 @@ const getPlanets = () => {
             <li class="planet">${item.name}</li>
             `)
             listOfPlanets.innerHTML = listElems.join('');
+            prevBtn.innerHTML = 'Previous';
+            nextBtn.innerHTML = 'Next';
+            prevBtn.classList.add('btn');
+            nextBtn.classList.add('btn');
+            if (currentPage === 1) {
+                prevBtn.innerHTML = '';
+            }
+            if (currentPage === 6) {
+                nextBtn.innerHTML = '';
+            }
         })
         .catch((err) => {
             console.log("Error:", err);
         });
 }
-
-getPeople;
-getPlanets;
-
 
 getPeopleBtn.addEventListener('click', getPeople);
 getPlanetsBtn.addEventListener('click', getPlanets);
