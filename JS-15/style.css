@@ -1,0 +1,58 @@
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(217deg, rgba(235, 145, 145, 0.8), rgba(141, 11, 11, 0) 70.71%), linear-gradient(127deg, rgba(63, 121, 63, 0.8), rgba(18, 179, 18, 0) 70.71%), linear-gradient(336deg, rgba(124, 124, 216, 0.8), rgba(18, 18, 160, 0) 70.71%);
+    background-repeat: no-repeat;
+    font-family: 'Dancing Script', sans-serif;
+}
+
+.container {
+    padding: 20px;
+}
+
+#generator-btn {
+    cursor: pointer;
+    display: block;
+    width: 150px;
+    height: 50px;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    border-radius: 20px;
+    margin: 5px auto 0px auto;
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 30px;
+    background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+}
+
+#id-generator {
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.id-item {
+    list-style: none;
+    padding: 5px;
+    margin: 5px;
+    color: rgb(161, 89, 230);
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+#fonts {
+    font-size: 14px;
+    width: 50%;
+    margin: 50px auto 30px auto;
+    text-align: center;
+}
+
+#fonts button {
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Dancing Script', sans-serif;
+    width: 50px;
+    height: 20px;
+    border: 1px solid green;
+    color: green;
+    border-radius: 5px;
+}
